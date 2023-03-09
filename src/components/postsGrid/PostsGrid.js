@@ -27,7 +27,7 @@ export default function PostsGrid() {
   if (!isLoading && !isError && blogs?.length === 0) {
     blogContent = (
       <div>
-        <h2 className="text-2xl font-semibold">{error}</h2>
+        <h2 className="text-2xl font-semibold">No posts found</h2>
       </div>
     )
   };
