@@ -1,12 +1,14 @@
-export default function Navbar(){
+import { Link } from "react-router-dom";
+
+export default function Navbar() {
   return (
     <nav className="py-4 border-b">
       <div className="navbar-container">
         {/* logo */}
         <div className="logo">
-          <a href="index.html">
+          <Link to="/">
             <img src="./images/LWSBlog.svg" alt="search" />
-          </a>
+          </Link>
         </div>
         {/* auth buttons , This will nonfunctional, just for nice looking */}
         <div className="auth-buttons">

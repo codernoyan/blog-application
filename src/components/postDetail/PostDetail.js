@@ -9,7 +9,7 @@ export default function PostDetail({ blog }) {
         </h1>
         <div className="tags" id="lws-singleTags">
           {
-            tags && tags?.map((tag, i) => <span key={i}>#{tag}</span>)
+            tags && tags?.map((tag, i) => <span key={i}> #{tag},</span>)
           }
         </div>
         <div className="btn-group">
