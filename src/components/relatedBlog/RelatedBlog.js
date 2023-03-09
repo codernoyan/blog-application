@@ -15,7 +15,7 @@ export default function RelatedBlog({ blog }) {
         </Link>
         <div className="mb-0 tags">
           {/* <span>#python,</span> <span>#tech,</span> <span>#git</span> */}
-          {tags && `#${tags.join(', #')}`}
+          {tags && (<span>{`#${tags.join(', #')}`}</span>)}
         </div>
         <p>{createdAt}</p>
       </div>
