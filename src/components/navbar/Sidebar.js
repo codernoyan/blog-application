@@ -7,7 +7,7 @@ export default function Sidebar() {
   const dispatch = useDispatch();
   const [sort, setSort] = useState(sortTitle);
 
-  const [filter, setFilter] = useState(filterTitle)
+  const [filter, setFilter] = useState(filterTitle);
 
   const handleSort = (e) => {
     e.preventDefault();

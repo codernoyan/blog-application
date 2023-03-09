@@ -15,9 +15,7 @@ export default function Post({ blog }) {
         <Link to={`/post/${id}`} className="lws-postTitle">{title}</Link>
         <div className="lws-tags">
           {/* <span>#python,</span> <span>#tech,</span> <span>#git</span> */}
-          {
-            tags && tags?.map((tag, i) => <span key={i}>#{tag}</span>)
-          }
+          {tags && `#${tags.join(', #')}`}
         </div>
         {/* Show this element if post is saved */}
         {

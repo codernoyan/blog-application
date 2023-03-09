@@ -49,7 +49,7 @@ export default function PostDetails() {
         {blogContent}
         {/* detailed post ends */}
         {/* related posts */}
-        <RelatedPosts />
+        <RelatedPosts blog={blog} />
         {/* related posts ends */}
       </section>
     </>

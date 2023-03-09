@@ -38,7 +38,6 @@ export default function PostsGrid() {
     }
   }
 
-
   // fetch with error handling
   let blogContent;
 

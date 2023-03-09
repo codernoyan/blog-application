@@ -8,9 +8,7 @@ export default function PostDetail({ blog }) {
           {title}
         </h1>
         <div className="tags" id="lws-singleTags">
-          {
-            tags && tags?.map((tag, i) => <span key={i}> #{tag},</span>)
-          }
+          {tags && (<span>{`#${tags.join(', #')}`}</span>)}
         </div>
         <div className="btn-group">
           {/* handle like on button click */}
