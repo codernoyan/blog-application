@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logoImage from '../../assets/images/LWSBlog.svg';
 
 export default function Navbar() {
   return (
@@ -7,7 +8,7 @@ export default function Navbar() {
         {/* logo */}
         <div className="logo">
           <Link to="/">
-            <img src="./images/LWSBlog.svg" alt="search" />
+            <img src={logoImage} alt="search" />
           </Link>
         </div>
         {/* auth buttons , This will nonfunctional, just for nice looking */}
