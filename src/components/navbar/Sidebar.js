@@ -6,7 +6,6 @@ export default function Sidebar() {
   const { sortTitle, filterTitle } = useSelector((state) => state.filters);
   const dispatch = useDispatch();
   const [sort, setSort] = useState(sortTitle);
-
   const [filter, setFilter] = useState(filterTitle);
 
   const handleSort = (e) => {

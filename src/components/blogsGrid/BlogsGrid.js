@@ -1,10 +1,10 @@
 import { fetchBlogs } from "../../features/blogs/blogsSlice";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Post from "../post/Post";
 import Loading from "../loading/Loading";
+import Blog from "../blog/Blog";
 
-export default function PostsGrid() {
+export default function BlogsGrid() {
   const { isLoading, isError, blogs, error } = useSelector((state) => state.blogs);
   const { sortTitle, filterTitle } = useSelector((state) => state.filters);
   const dispatch = useDispatch();
@@ -46,7 +46,7 @@ export default function PostsGrid() {
   if (!isLoading && isError) {
     blogContent = (
       <div>
-        <h2 className="text-2xl font-semibold">{error}</h2>
+        <h2 className="text-xl font-semibold">{error}</h2>
       </div>
     )
   };
@@ -54,7 +54,7 @@ export default function PostsGrid() {
   if (!isLoading && !isError && blogs?.length === 0) {
     blogContent = (
       <div>
-        <h2 className="text-2xl font-semibold">No posts found</h2>
+        <h2 className="text-xl font-semibold">No posts found</h2>
       </div>
     )
   };
@@ -64,7 +64,7 @@ export default function PostsGrid() {
       blogs
         .filter(filterByRadioButton)
         .sort(sortByOptions)
-        .map((blog) => <Post key={blog.id} blog={blog} />)
+        .map((blog) => <Blog key={blog.id} blog={blog} />)
     )
   }
 

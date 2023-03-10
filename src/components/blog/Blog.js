@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-export default function Post({ blog }) {
+export default function Blog({ blog }) {
   const { id, title, image, tags, likes, isSaved, createdAt } = blog || {};
   return (
     <div className="lws-card">
-      <Link to={`/post/${id}`}>
+      <Link to={`/blogs/${id}`}>
         <img src={image} className="lws-card-image" alt={title} />
       </Link>
       <div className="p-4">
@@ -12,7 +12,7 @@ export default function Post({ blog }) {
           <p className="lws-publishedDate">{createdAt}</p>
           <p className="lws-likeCount"><i className="fa-regular fa-thumbs-up" />{likes}</p>
         </div>
-        <Link to={`/post/${id}`} className="lws-postTitle">{title}</Link>
+        <Link to={`/blogs/${id}`} className="lws-postTitle">{title}</Link>
         <div className="lws-tags">
           {/* <span>#python,</span> <span>#tech,</span> <span>#git</span> */}
           {tags && (<span>{`#${tags.join(', #')}`}</span>)}

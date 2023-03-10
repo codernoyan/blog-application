@@ -1,24 +1,25 @@
 import { increaseLike, increaseLikeCount, toggleSave, toggleSaveToDB } from "../../features/blog/blogSlice";
 import { useDispatch } from "react-redux";
 
-export default function PostDetail({ blog }) {
+export default function BlogInfo({ blog }) {
   const { id, title, description, image, tags, likes, isSaved } = blog || {};
-
   const dispatch = useDispatch()
 
+  // increase like count
   const handleIncreaseLike = (id, likes) => {
     dispatch(increaseLikeCount({ likes, id }))
       .then((info) => {
-        dispatch(increaseLike(info.payload.id));
-      })
+        dispatch(increaseLike(info?.payload?.id));
+      });
   };
 
+  // toggle save
   const handleToggleSave = (id, isSaved) => {
     dispatch(toggleSaveToDB({ isSaved, id }))
       .then((info) => {
-        dispatch(toggleSave(info.payload.id));
-    })
-  }
+        dispatch(toggleSave(info?.payload?.id));
+      });
+  };
 
   return (
     <main className="post">
